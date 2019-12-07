@@ -13,6 +13,11 @@ body {
     margin: 40px auto;
     /* background: red; */
     transform: rotate(45deg);
+
+    animation-name: platzi-base;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
 }
 
 .platzi-left {
@@ -24,6 +29,10 @@ body {
     box-sizing: border-box;
     position: relative;
     top: 1px;
+
+    animation-name: platzi-left;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 
 .platzi-right {
@@ -33,4 +42,28 @@ body {
     border-top: none;
     box-sizing: border-box;
     border-radius: 0 0 20px 20px;
+}
+
+/* Esto hace pasar de trasnparente  a ponerse en la patalla para luego rodar */
+@keyframes platzi-base {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    30% {
+        opacity: 1;
+        transform: rotate(405deg);
+    }
+    80% {
+        opacity: 1;
+        transform: rotate(405deg);
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes platzi-left {
+
 }
